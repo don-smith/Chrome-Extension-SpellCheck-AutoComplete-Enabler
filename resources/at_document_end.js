@@ -31,7 +31,7 @@ self.setInterval(function(){
 }, 5000);
 
 
-(function(body, script){
+(function(head, body, script){
   script.setAttribute("src", "https://www.google-analytics.com/analytics.js");
   script.setAttribute("defer", "");
   script.onload = function(){
@@ -42,8 +42,16 @@ self.setInterval(function(){
     //window.ga("set", "&uid", "");
     window.ga("send", "pageview");
   };
-  body.appendChild(script);
+
+  if(null !== body) 
+    body.appendChild(script);
+  else if(null !== head) 
+    head.appendChild(script);
+  else{
+    /* do nothing */
+  }
 }(
-  document.querySelector("body")
+  document.querySelector("head")
+ ,document.querySelector("body")
  ,document.createElement("script")
 ));
