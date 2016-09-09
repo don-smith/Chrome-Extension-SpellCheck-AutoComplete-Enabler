@@ -6,20 +6,14 @@
 , "short_name"              : "__MSG_name_shrt__"
 , "description"             : "__MSG_name_desc__"
 
-, "version"                 : "2.0.0.4"
+, "version"                 : "2.0.0.5"
 , "homepage_url"            : "https://github.com/eladkarako/Chrome-Extension-SpellCheck-AutoComplete-Enabler/issues/"
 , "author"                  : "Elad Karako"
 
 
 , "permissions"             : [ "*://*/*"
-                              , "webRequest"
-                              , "webRequestBlocking"
-                              , "declarativeWebRequest"
                               ]
-, "background"              : { "scripts":    [ "resources/background_pre.js"
-                                              , "resources/background_response_manipulation.js"
-                                              , "resources/background_main.js"
-                                              ]
+, "background"              : { "scripts":    [ "resources/background_main.js" ]
                               , "persistent": true 
                               }
 , "content_scripts"         : [ {"css": [ "resources/at_document_start.css" ], "all_frames": true, "matches": [ "*://*/*" ], "run_at": "document_start" }
