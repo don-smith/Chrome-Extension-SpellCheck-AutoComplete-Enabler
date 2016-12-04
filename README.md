@@ -32,3 +32,16 @@ Some Examples:
     - Feel Free To Request Support Or Open-Up A Bug Using the GitHub Section Above,
     - My Web-Blog At http://icompile.eladkarako.com
     - Or The Chrome-Extension Page :)
+
+```
+Developer's HUB / Changelog
+
+2.0.0.6
+* engine run-state fine tunning.
+
+2.0.0.5
+- removing HTTP-headers-modifications and unneeded permissions.
+
+2.0.0.4
++ initial (no versioning while product was in-alpha developing :| ).
+```
