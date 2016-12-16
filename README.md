@@ -39,8 +39,8 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 ```
 Developer's HUB / Changelog
 
-2.0.0.7
-* engine run-state fine tunning.
+2.0.0.8
+* engine run-state fine tuning.
 
 2.0.0.5
 - removing HTTP-headers-modifications and unneeded permissions.
