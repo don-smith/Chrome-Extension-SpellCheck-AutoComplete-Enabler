@@ -29,29 +29,3 @@ self.setInterval(function(){
   , null
   ));
 }, 5000);
-
-
-(function(head, body, script){
-  script.setAttribute("src", "https://www.google-analytics.com/analytics.js");
-  script.setAttribute("defer", "");
-  script.onload = function(){
-    if("undefined" === typeof window.ga) return;
-    window.ga("create", "UA-78481436-1", "auto");
-    window.ga("require", "linkid", "linkid.js");
-    window.ga("require", "displayfeatures");
-    //window.ga("set", "&uid", "");
-    window.ga("send", "pageview");
-  };
-
-  if(null !== body) 
-    body.appendChild(script);
-  else if(null !== head) 
-    head.appendChild(script);
-  else{
-    /* do nothing */
-  }
-}(
-  document.querySelector("head")
- ,document.querySelector("body")
- ,document.createElement("script")
-));
