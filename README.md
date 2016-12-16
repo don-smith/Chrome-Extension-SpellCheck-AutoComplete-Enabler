@@ -39,7 +39,7 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 ```
 Developer's HUB / Changelog
 
-2.0.0.6
+2.0.0.7
 * engine run-state fine tunning.
 
 2.0.0.5
