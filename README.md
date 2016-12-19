@@ -39,6 +39,9 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 ```
 Developer's HUB / Changelog
 
+3.0.0.1
+* project architecture, support execution on pages with and without JavaScript support, no code-duplication using the scope of the chrome-extension.
+
 2.0.0.8
 * engine run-state fine tuning.
 
