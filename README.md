@@ -39,6 +39,12 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 ```
 Developer's HUB / Changelog
 
+3.0.1.3
++ error handling
+
+3.0.1.2
+* adding prototyping for browser compatibility.
+
 3.0.1.1
 * tag-number updated instead of overriding it.
 
