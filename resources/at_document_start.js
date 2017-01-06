@@ -7,6 +7,7 @@
    ╚════════════════════════════════════════════════════════════════════╝
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
 
+counter_total = 0;
 
 query = [
   '[spellcheck]:not([spellcheck="true"])'                                                                  /* remove limits  */
@@ -20,7 +21,8 @@ query = [
 function action(){
   var elements = document.querySelectorAll(query);
   if(null === elements || 0 === elements.length) return;
-  try{chrome.runtime.sendMessage({badge_data: elements.length});}catch(err){} /* update extension's badge. */
+  counter_total += elements.length;
+  try{chrome.runtime.sendMessage({badge_data: counter_total});}catch(err){} /* update extension's badge. */
 
   elements.forEach(function(element){
     element.setAttribute("spellcheck","true"); 
