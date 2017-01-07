@@ -17,8 +17,7 @@ query = [
 , '[contentEditable]:not([spellcheck]):not([autocomplete])'                                                /* explicit allow */
 , 'input:not([readonly]):not([type="hidden"]):not([type="submit"]):not([spellcheck]):not([autocomplete])'  /* explicit allow */
 , 'textarea:not([readonly]):not([spellcheck]):not([autocomplete])'                                         /* explicit allow */
-, ':not([done-spellcheckautocomplete])'
-].join(', ');
+].join(':not([done-spellcheckautocomplete]), ');
 
 
 function action(){

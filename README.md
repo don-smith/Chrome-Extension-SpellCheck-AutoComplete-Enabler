@@ -39,6 +39,9 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 ```
 Developer's HUB / Changelog
 
+3.0.1.5
+* engine fix, for repetition-flag
+
 3.0.1.4
 * limit repetition by flag done-elements.
 
