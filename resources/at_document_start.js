@@ -12,13 +12,12 @@ NodeList.prototype.forEach = Array.prototype.forEach;
 counter_total = 0;
 
 query = [
-  '[spellcheck]:not([spellcheck="true"])'                                                                  /* remove limits  */
-, '[autocomplete]:not([autocomplete="on"])'                                                                /* remove limits  */
-, '[contentEditable]:not([spellcheck]):not([autocomplete])'                                                /* explicit allow */
-, 'input:not([readonly]):not([type="hidden"]):not([type="submit"]):not([spellcheck]):not([autocomplete])'  /* explicit allow */
-, 'textarea:not([readonly]):not([spellcheck]):not([autocomplete])'                                         /* explicit allow */
-].join(':not([done-spellcheckautocomplete]), ');
-
+  '[spellcheck]:not([spellcheck="true"])'
+, '[autocomplete]:not([autocomplete="on"])'
+, '[contentEditable]:not([contentEditable="false"])'
+, 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="reset"]):not([type="submit"])'
+, 'textarea:not([readonly]):not([disabled])'
+].join(':not([done-spellcheckautocompleteenabler]),') + ":not([done-spellcheckautocompleteenabler])" /*for last one*/;
 
 function action(){
   var elements = document.querySelectorAll(query);
@@ -27,13 +26,11 @@ function action(){
   try{chrome.runtime.sendMessage({badge_data: counter_total});}catch(err){} /* update extension's badge. */
 
   elements.forEach(function(element){
-    element.setAttribute("done-spellcheckautocomplete",""); 
-
+    element.setAttribute("done-spellcheckautocompleteenabler",""); 
     element.setAttribute("spellcheck","true"); 
     element.setAttribute("autocomplete","on"); 
   });
 }
 
-
-try{  action();                               }catch(err){}
-try{  interval_id = setInterval(action, 500); }catch(err){ clearInterval(interval_id); }      /*only available in pages having JavaScript support*/
+action();
+setInterval(action, 500);    /*only available in pages having JavaScript support*/

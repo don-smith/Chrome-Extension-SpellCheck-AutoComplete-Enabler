@@ -15,10 +15,6 @@
 
 <hr/>
 
-###If You Like It, Show It, <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=7994YX29444PA&amp;lc=US&amp;item_name=Elad%20Karako&amp;item_number=stackoverflow%2dcoffee%2dicon&amp;amount=0%2e50&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" rel="nofollow">By A Small Donation Using PayPal</a>. Thank You.
-
-<hr/>
-
 🚀︎
 After Installation, User-Experience Of A Lot Of Websites Will Be Massivly-Improve,
 With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements Across The Whole Page!
@@ -36,8 +32,14 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
     - My Web-Blog At http://icompile.eladkarako.com
     - Or The Chrome-Extension Page :)
 
-```
+<pre>
 Developer's HUB / Changelog
+
+4.0.0.6
+* engine query update, more efficient discovery removing cases where the text-containers are already set ok'ly, and ignore readonly/disabled text containers <sub>(you may download <a target="_blank" href="https://chrome.google.com/webstore/detail/jcgjifkfonefkppobfgckphhmaafodoi/">"Enabler"</a> chrome-extension to enable those..)</sub>
+
+4.0.0.5
+* engine flag fix
 
 3.0.1.7
 * engine fix, for repetition-flag
@@ -65,4 +67,6 @@ Developer's HUB / Changelog
 
 2.0.0.4
 + initial (no versioning while product was in-alpha developing :| ).
-```
+</pre>
+
+<sub><a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=7994YX29444PA&amp;lc=US&amp;item_name=Elad%20Karako&amp;item_number=stackoverflow%2dcoffee%2dicon&amp;amount=0%2e50&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" rel="nofollow">PayPal Donation 🙏︎</a></sub>
