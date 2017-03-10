@@ -1,21 +1,21 @@
 <h1> <img src="resources/icon.png" height="64" width="64"/> Chrome-Extension-SpellCheck-AutoComplete-Enabler</h1>
 
-- Chrome Spell-Check Is Great! 🌟︎
-- Chrome Auto-Completing Is A Huge Time-Saver! 🕙︎
+- Chrome Spell-Check Is Great! �︎
+- Chrome Auto-Completing Is A Huge Time-Saver! �︎
 
 <img src="resources/screenshot_1.png"/>
 
 - ❓︎  So Why There Are Websites That Disable Those Wonderful Features?
 - ❗︎  Don't Know, Don't Care!
 
-💁︎
+�︎
 - Install This Extension, SpellCheck && AutoComplete Will Be Back!
 - Works Perfectly With Every Website. 100% Compatible.
 - Also Tells You How-Many \*Stuff\* Were Fixed  :]
 
 <hr/>
 
-🚀︎
+�︎
 After Installation, User-Experience Of A Lot Of Websites Will Be Massivly-Improve,
 With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements Across The Whole Page!
 
@@ -27,7 +27,7 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
     
     - much.. much.. more..☺
     
-<h3>👔︎ Developer Hub</h3>
+<h3>�︎ Developer Hub</h3>
     - Feel Free To Request Support Or Open-Up A Bug Using the GitHub Section Above,
     - My Web-Blog At http://icompile.eladkarako.com
     - Or The Chrome-Extension Page :)
@@ -35,8 +35,9 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 <pre>
 Developer's HUB / Changelog
 
-4.0.2.2
-* engine update: improve query for elements by omitting input-types that has no-meaning for autocomplete/spellcheck (file/image/...) 
+4.0.2.5
+* improve element-discovery-query, omitting input-types that has no-need for autocomplete/spellcheck (button/file/image/...).
++ improve algorithm's overall-efficiency!
 
 4.0.2.1
 * engine update: smart-heuristics for websites that tries to change autocomplete/spellcheck back (such as eBay's onchange in the main-search input element) - resolved by unhooking those events :] -- ha! ha!!

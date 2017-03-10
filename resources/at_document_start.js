@@ -15,15 +15,15 @@ query = (function(array,glue){
           return array.join(glue + ",") + glue;
         }(
           [
-            '[spellcheck]:not([spellcheck="true"])'
-          , '[autocomplete]:not([autocomplete="on"])'
+            '[spellcheck]'
+          , '[autocomplete]'
           , '[contentEditable]:not([contentEditable="false"])'
-          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="file"]):not([type="checkbox"]):not([type="image"]):not([type="reset"]):not([type="submit"])'
+          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="image"]):not([type="reset"]):not([type="submit"])'
           , 'textarea:not([readonly]):not([disabled])'
-          , 'form:not([spellcheck="true"]):not([autocomplete="on"])'
+          , 'form'
           ]
           ,
-          ':not([done-spellcheckautocompleteenabler="final"])'  //maybe be still be `done-spellcheckautocompleteenabler="first_test"` to when we need to run again and unhook the events too..
+          ':not([spellcheck="true"]):not([autocomplete="on"]):not([done-spellcheckautocompleteenabler="final"])'  //maybe be still be `done-spellcheckautocompleteenabler="first_test"` to when we need to run again and unhook the events too..
         ));
 
 function action(){
