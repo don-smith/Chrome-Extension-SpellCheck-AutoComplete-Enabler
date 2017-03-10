@@ -11,13 +11,20 @@ NodeList.prototype.forEach = Array.prototype.forEach;
 
 counter_total = 0;
 
-query = [
-  '[spellcheck]:not([spellcheck="true"])'
-, '[autocomplete]:not([autocomplete="on"])'
-, '[contentEditable]:not([contentEditable="false"])'
-, 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="reset"]):not([type="submit"])'
-, 'textarea:not([readonly]):not([disabled])'
-].join(':not([done-spellcheckautocompleteenabler]),') + ":not([done-spellcheckautocompleteenabler])" /*for last one*/;
+query = (function(array,glue){
+          return array.join(glue + ",") + glue;
+        }(
+          [
+            '[spellcheck]:not([spellcheck="true"])'
+          , '[autocomplete]:not([autocomplete="on"])'
+          , '[contentEditable]:not([contentEditable="false"])'
+          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="reset"]):not([type="submit"])'
+          , 'textarea:not([readonly]):not([disabled])'
+          , 'form'
+          ]
+          ,
+          ':not([done-spellcheckautocompleteenabler])'
+        ));
 
 function action(){
   var elements = document.querySelectorAll(query);
