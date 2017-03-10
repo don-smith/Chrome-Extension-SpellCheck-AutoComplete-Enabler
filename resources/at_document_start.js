@@ -18,7 +18,7 @@ query = (function(array,glue){
             '[spellcheck]:not([spellcheck="true"])'
           , '[autocomplete]:not([autocomplete="on"])'
           , '[contentEditable]:not([contentEditable="false"])'
-          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="reset"]):not([type="submit"])'
+          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="file"]):not([type="checkbox"]):not([type="image"]):not([type="reset"]):not([type="submit"])'
           , 'textarea:not([readonly]):not([disabled])'
           , 'form:not([spellcheck="true"]):not([autocomplete="on"])'
           ]

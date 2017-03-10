@@ -35,6 +35,9 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 <pre>
 Developer's HUB / Changelog
 
+4.0.2.2
+* engine update: improve query for elements by omitting input-types that has no-meaning for autocomplete/spellcheck (file/image/...) 
+
 4.0.2.1
 * engine update: smart-heuristics for websites that tries to change autocomplete/spellcheck back (such as eBay's onchange in the main-search input element) - resolved by unhooking those events :] -- ha! ha!!
 
