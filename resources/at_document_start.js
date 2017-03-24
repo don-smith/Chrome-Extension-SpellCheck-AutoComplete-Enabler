@@ -18,12 +18,16 @@ query = (function(array,glue){
             '[spellcheck]'
           , '[autocomplete]'
           , '[contentEditable]:not([contentEditable="false"])'
-          , 'input:not([readonly]):not([disabled]):not([type="hidden"]):not([type="radio"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="image"]):not([type="reset"]):not([type="submit"])'
-          , 'textarea:not([readonly]):not([disabled])'
+          , 'input:not([readonly]):not([disabled]):not([hidden]):not([type="hidden"]):not([type="radio"]):not([type="button"]):not([type="file"]):not([type="checkbox"]):not([type="image"]):not([type="reset"]):not([type="submit"])'
+          , 'textarea:not([readonly]):not([disabled]):not([hidden])'
           , 'form'
           ]
           ,
-          ':not([spellcheck="true"]):not([autocomplete="on"]):not([done-spellcheckautocompleteenabler="final"])'  //maybe be still be `done-spellcheckautocompleteenabler="first_test"` to when we need to run again and unhook the events too..
+          ''
+         +':not([style*="display:none"]):not([style*="display: none"])'
+         +':not([style*="visibility:hidden"]):not([style*="visibility: hidden"])'
+         +':not([spellcheck="true"]):not([autocomplete="on"])'
+         +':not([done-spellcheckautocompleteenabler="final"])'  //maybe be still be `done-spellcheckautocompleteenabler="first_test"` to when we need to run again and unhook the events too..
         ));
 
 function action(){
@@ -40,6 +44,10 @@ function action(){
       element.setAttribute("autocomplete","on"); 
     }else
     if("first_test" === done_flag){                                                   //something changed-it-back :| we better unhook all events! (eBay's input onchange-event on is a good example for input that keeps having autocomplete and spellcheck disabled on-loop+event-triggered :/  this will cure the events part...)
+      element.setAttribute("done-spellcheckautocompleteenabler","final");             //set attributes (wherever or not it will `stick`.. this will be final processing anyway..)
+
+      if(null !== location.hostname.match(/mail.google.com$/i)) return;               //exceptions to never unhook.. (but still will mark `final`.. :] )
+
       var cloned = element.cloneNode(true);                                           //unhook.
       element.parentElement.replaceChild(cloned, element);
       element = cloned;
