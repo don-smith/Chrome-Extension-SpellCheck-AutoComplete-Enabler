@@ -33,8 +33,6 @@ query = (function(array,glue){
 function action(){
   var elements = document.querySelectorAll(query);
   if(null === elements || 0 === elements.length) return;
-  counter_total += elements.length;
-  try{chrome.runtime.sendMessage({badge_data: counter_total});}catch(err){} /* update extension's badge. */
 
   elements.forEach(function(element){
     var done_flag = element.getAttribute("done-spellcheckautocompleteenabler");
@@ -42,6 +40,7 @@ function action(){
       element.setAttribute("done-spellcheckautocompleteenabler", "first_test");
       element.setAttribute("spellcheck","true"); 
       element.setAttribute("autocomplete","on"); 
+      counter_total+=1;
     }else
     if("first_test" === done_flag){                                                   //something changed-it-back :| we better unhook all events! (eBay's input onchange-event on is a good example for input that keeps having autocomplete and spellcheck disabled on-loop+event-triggered :/  this will cure the events part...)
       element.setAttribute("done-spellcheckautocompleteenabler","final");             //set attributes (wherever or not it will `stick`.. this will be final processing anyway..)
@@ -55,6 +54,7 @@ function action(){
       element.setAttribute("done-spellcheckautocompleteenabler","final");             //set attributes (again)
       element.setAttribute("spellcheck","true"); 
       element.setAttribute("autocomplete","on"); 
+      counter_total+=1;
     }else 
     if("final" === done_flag){                                                        //something changed-it-back AGAIN!
       //maybe we should also handle the parent's unhooking events,
@@ -62,6 +62,8 @@ function action(){
       //---- do nothing..
     }
   });
+
+  try{chrome.runtime.sendMessage({badge_data: counter_total});}catch(err){} /* update extension's badge. */
 }
 
 action();

@@ -35,6 +35,9 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 <pre>
 Developer's HUB / Changelog
 
+4.0.2.7
+* correct element-count.
+
 4.0.2.6
 * improve discovery elements- not hidden elements.
 + adding exception to never unhook-events (in second-phase), based on domain name (for example gmail), to preserve functionality.
