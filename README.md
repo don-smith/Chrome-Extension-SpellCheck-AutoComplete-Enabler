@@ -35,7 +35,7 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 <pre>
 Developer's HUB / Changelog
 
-4.0.2.8
+4.0.2.9
 * don't unhook event-handles on Google domains.
 
 4.0.2.7

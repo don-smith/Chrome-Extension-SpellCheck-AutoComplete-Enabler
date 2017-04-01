@@ -45,7 +45,7 @@ function action(){
     if("first_test" === done_flag){                                                   //something changed-it-back :| we better unhook all events! (eBay's input onchange-event on is a good example for input that keeps having autocomplete and spellcheck disabled on-loop+event-triggered :/  this will cure the events part...)
       element.setAttribute("done-spellcheckautocompleteenabler","final");             //set attributes (wherever or not it will `stick`.. this will be final processing anyway..)
 
-      if(null !== location.hostname.match(/\.google\.$/i)) return;                    //exceptions to never unhook.. (but still will mark `final`.. :] )
+      if(null !== location.hostname.match(/\.google\./i)) return;                     //exceptions to never unhook.. (but still will mark `final`.. :] )
 
       var cloned = element.cloneNode(true);                                           //unhook.
       element.parentElement.replaceChild(cloned, element);
