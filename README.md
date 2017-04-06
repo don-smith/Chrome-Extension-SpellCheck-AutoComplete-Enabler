@@ -35,6 +35,10 @@ With Enabled AutoComplete Menu, And Spell-Error Checking On Text-Input Elements 
 <pre>
 Developer's HUB / Changelog
 
+4.0.3.1
+- removing unhooking functionality for best website-compability.
+* improved element-discovery query.
+
 4.0.2.9
 * don't unhook event-handles on Google domains.
 
